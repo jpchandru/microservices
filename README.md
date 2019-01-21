@@ -4,6 +4,7 @@ There are 2 projects called hotel-list and hotel-operations inside the parent mo
 
 Hotel-list:(GET operation sorted by Rating) : http://localhost:8090/hotels?page=0&size=2 
 Sample response:
+```
 {
     "content": [
         {
@@ -54,9 +55,11 @@ Sample response:
     "first": true,
     "empty": false
 }
-
+```
 
 Hotel-list:(GET operation) : http://localhost:8090/hotels/1005
+
+```
 {
     "id": 1005,
     "name": "Rennaisance Inn",
@@ -64,9 +67,11 @@ Hotel-list:(GET operation) : http://localhost:8090/hotels/1005
     "rating": 5,
     "location": "Newark, New Jersey, USA"
 }
+```
 
 Hotel-operations:(PUT operation): http://localhost:8091/hotels/1005 and add the request body without array.
 Sample request:
+```
         {
             "id": 1005,
             "name": "Rennaisance Inn",
@@ -74,12 +79,15 @@ Sample request:
             "rating": 6,
             "location": "Newark, New Jersey, USA"
         }
-        
+```
 Response:
+```
 HTTPStatus: 204 No Content
+```
 
 Hotel-Operations [POST operation]: http://localhost:8091/hotels/add
 Sample Request:
+```
 [		{
             "id": 1007,
             "name": "Embassy Suites",
@@ -88,13 +96,17 @@ Sample Request:
             "location": "Newark, New Jersey, USA"
         }
 ]
+```
 
 Response:
+```
 HTTPStatus: 201 Created
 Body: Hotel(s) has been added successfully
+```
 
 Hotel-Operations:(GET operation) : http://localhost:8091/hotels/1007
 Response:
+```
 {
     "id": 1007,
     "name": "Embassy Suites",
@@ -102,3 +114,4 @@ Response:
     "rating": 5,
     "location": "Newark, New Jersey, USA"
 }
+```
