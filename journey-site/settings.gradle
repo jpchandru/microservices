@@ -1,0 +1,2 @@
+rootProject.name = 'journey-site'
+include 'hotel-list','hotel-operations'
