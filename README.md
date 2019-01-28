@@ -7,5 +7,7 @@ This repository has projects to showcase
 5. whole microservices showcase project.
 
 ```
+Microservices-architecture: hotel-listing
 Microservices-design: journey-site
+Microservices-security: cjkart-security : Ecommerce login and logout using OAuth2-SS0
 ```
