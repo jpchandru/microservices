@@ -1,14 +1,25 @@
 server:
   port: 8091
+  servlet:
+    context-path: /client
+  session:
+    cookie:
+      name: UISESSION
 spring:
   application: ecommerce-client-application
+  thymeleaf:
+    cache: false
 security:
+  basic:
+    enabled: false
   oauth2:
     client:
-      clientId: 233668646673605
-      clientSecret: 33b17e044ee6a4fa383f46ec6e28ea1d
-      accessTokenUri: https://localhost:8090/oauth/token
-      userAuthorizationUri: https://localhost:8090/oauth/authorize
+      #clientId: 233668646673605
+      #clientSecret: 33b17e044ee6a4fa383f46ec6e28ea1d
+      clientId: democlientid
+      clientSecret: secret
+      accessTokenUri: http://localhost:8090/auth/oauth/token
+      userAuthorizationUri: http://localhost:8090/auth/oauth/authorize
       #below comments applies for auto creating auth and resource server like FB oauth itself
       #accessTokenUri: https://graph.facebook.com/oauth/access_token
       #userAuthorizationUri: https://www.facebook.com/dialog/oauth
@@ -16,4 +27,5 @@ security:
       #authenticationScheme: query
       #clientAuthenticationScheme: form
     resource:
-      userInfoUri: https://graph.facebook.com/me
+      #userInfoUri: https://graph.facebook.com/me
+      userInfoUri: http://localhost:8090/auth/user/me

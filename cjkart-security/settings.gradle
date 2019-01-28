@@ -1,1 +1,2 @@
 rootProject.name = 'cjkart-security'
+include 'client-application', 'authorization-server'

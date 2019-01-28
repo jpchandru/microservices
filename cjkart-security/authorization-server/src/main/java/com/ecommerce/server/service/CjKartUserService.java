@@ -13,7 +13,10 @@ import org.springframework.stereotype.Service;
 public class CjKartUserService implements UserDetailsService{
 
     @Autowired
-    private final CjKartUserRepository cjKartUserRepository;
+    private  CjKartUserRepository cjKartUserRepository;
+
+    public CjKartUserService(){
+    }
 
     @Autowired
     public CjKartUserService(CjKartUserRepository cjKartUserRepository){
